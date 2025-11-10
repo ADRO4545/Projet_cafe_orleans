@@ -273,6 +273,10 @@ header {
     gap: 15px;
 }
 
+.image_produit {
+    background-repeat: no-repeat;
+}
+
 .prix,
 .nom_bouton {
     margin: 0;
@@ -388,8 +392,85 @@ header {
 
 .petit_plaisir,
 .decouvrir,
-.liste_produits{
+.liste_produits {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+footer {
+    display: flex;
+    background-image: url("/IMAGES/footer_background.svg");
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo_footer {
+    width: 150px;
+}
+
+.texte_suivi {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    color: #E9BD8C;
+}
+
+.suivi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid #E9BD8D33;
+}
+
+.images_suivi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+[class^="logo_footer"] {
+    width: 42px;
+    max-height: 42px;
+    min-height: 37.28px;
+}
+
+.texte_footer {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 36px;
+    color: #E9BD8C;
+
+}
+
+.info_footer,
+.menu_footer {
+    display: flex;
+    color: white;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 24px;
+    align-self: flex-start;
+    margin-left: 42px;
+    gap:0px; 
+
+    flex-direction: column;
+}
+
+.pain_au_raisin,
+.nouveau_delice {
+    display: flex;
+    flex-direction: row;
+}
+
+.date_pain_au_raisin,
+.date_nouveau_delice{
+    color:#E9BD8C;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
