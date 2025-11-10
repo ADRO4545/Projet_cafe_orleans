@@ -1,0 +1,300 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+.body {
+    background-color: white;
+}
+
+.logo_bandeau {
+    width: 35px;
+    height: 40px;
+    top: 5px;
+    left: 20px;
+    opacity: 1;
+}
+
+.barre_bandeau {
+    width: 20px;
+    height: 12px;
+    margin-right: 20px;
+    border-width: 2px;
+
+}
+
+.reduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 379px;
+    background-image: url('/IMAGES/Bloc\ reduction.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0px;
+}
+
+.titre_reduc {
+    font-family: "Sansita Swashed", system-ui;
+    font-weight: 500;
+    font-size: 24px;
+    color: #933C24;
+}
+
+.texte_reduc,
+.texte_cafe {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5D5D5D;
+}
+
+.texte_cafe {
+    color: #E9BD8C;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.button_info {
+    background-color: #933C24;
+    color: white;
+    margin-top: 23px;
+    margin-right: 35px;
+    margin-bottom: 23px;
+    margin-left: 35px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 20px 24px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accueil {
+    display: flex;
+    align-items: center;
+    /* Centre verticalement */
+    width: 100%;
+    height: auto;
+    min-height: 254px;
+    background-image: url('/IMAGES/photo accueil.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.contenu_accueil {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Gap entre les textes et le bouton */
+    margin-left: 21px;
+    /* Décalage à gauche */
+}
+
+.texte_accueil {
+    display: flex;
+    flex-direction: column;
+}
+
+.texte_accueil p {
+    margin: 0;
+}
+
+.texte_cafe {
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+}
+
+.texte_2cafe {
+    font-family: "Sansita Swashed", system-ui;
+    font-weight: 400;
+    font-size: 26px;
+    color: #FFFFFF;
+}
+
+.button_info2 {
+    background-color: #933C24;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 20px 15px;
+    width: fit-content;
+    /* S'adapte à la largeur du texte */
+}
+
+.top_produits {
+    font-family: Sansita Swashed;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+[class^="produits"] {
+    background-image: url(/IMAGES/Image\ fond\ produits.svg);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    margin-bottom: 17px;
+    border-radius: 8px 8px 8px 8px;
+    padding-top: 8px;
+}
+
+.info_produit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-left: 35px;
+    padding-right: 15px;
+}
+
+.texte_produits {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:15px;
+}
+
+.bouton_images_produits {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+}
+
+.prix, .nom_bouton {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+}
+.nom_bouton{
+    font-weight: 500;
+}
+
+.bouton_produits {
+    background-color: #933C24;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.button_info_produits {
+    height: 30px;
+    width: 30px;
+}
