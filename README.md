@@ -25,15 +25,3 @@ Pour utiliser ce projet localement, suivez ces étapes :
 
 ## Utilisation
 Ouvrez simplement le fichier `index.html` dans un navigateur web pour visualiser le site.
-
-## Contribution
-Les contributions sont les bienvenues ! Pour contribuer :
-
-1. Fork ce dépôt.
-2. Créez une branche pour vos modifications (`git checkout -b feature/ma-nouvelle-fonctionnalité`).
-3. Validez vos modifications (`git commit -am 'Ajout d'une nouvelle fonctionnalité'`).
-4. Poussez vos modifications (`git push origin feature/ma-nouvelle-fonctionnalité`).
-5. Ouvrez une Pull Request.
-
-## Licence
-Ce projet est sous licence MIT.
