@@ -27,7 +27,7 @@ dd {
     margin-block-end: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+/* Remove list styles on ul, ol elements with a list role */
 ul[role='list'],
 ol[role='list'] {
     list-style: none;
@@ -109,67 +109,95 @@ textarea:not([rows]) {
     height: 12px;
     margin-right: 20px;
     border-width: 2px;
-
 }
 
-.reduction {
+.reduction,
+.a_propos {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 15px;
     width: 100%;
-    background-image: url('/IMAGES/Bloc_reduction.svg');
+    min-height: 379px;
     background-position: center;
     background-repeat: no-repeat;
     padding: 0px;
-    min-height: 379px;
-    /* <-- Hauteur de "a_propos" */
-    justify-content: space-between;
-    /* <-- Alignement de "a_propos" */
     background-size: cover;
 }
 
+.reduction {
+    margin-top: 15px;
+    background-image: url('/IMAGES/Bloc_reduction.svg');
+    justify-content: space-between;
+}
 
-.titre_reduc {
+.a_propos {
+    margin-top: 20px;
+    background-image: url('/IMAGES/fond_a_propos.svg');
+    justify-content: space-between;
+}
+
+.titre_reduc,
+.titre_propos {
     font-family: "Sansita Swashed", system-ui;
     font-weight: 500;
     font-size: 24px;
+}
+
+.titre_reduc {
     color: #933C24;
 }
 
+.titre_propos {
+    color: white;
+}
+
 .texte_reduc,
-.texte_cafe {
+.texte_propos {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #5D5D5D;
     max-width: 50%;
+    text-align: center;
+}
+
+.texte_reduc {
+    color: #5D5D5D;
+    max-width: 200px;
+}
+
+.texte_propos {
+    color: #B9B9B9;
+    max-width: 250px;
 }
 
 .texte_cafe {
+    font-family: "Inter", sans-serif;
     color: #E9BD8C;
     font-size: 14px;
     font-weight: 600;
 }
 
-.texte_reduc {
-    max-width: 200px;
-    text-align: center;
-}
-
-.button_info {
+.button_info,
+.button_info2 {
     background-color: #933C24;
     color: white;
-    margin-top: 23px;
-    margin-right: 35px;
-    margin-bottom: 23px;
-    margin-left: 35px;
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 16px;
     border-radius: 10px;
+}
+
+.button_info {
+    margin: 23px 35px;
     padding: 20px 24px;
+}
+
+.button_info2 {
+    padding: 10px 5px;
+    width: fit-content;
+    border-radius: 8px;
+    border: 1px solid #000000;
 }
 
 header {
@@ -177,7 +205,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: relative
+    position: relative;
 }
 
 .accueil {
@@ -210,30 +238,12 @@ header {
     margin: 0;
 }
 
-.texte_cafe {
-    font-family: "Inter", sans-serif;
-    color: #FFFFFF;
-}
-
 .texte_2cafe {
     font-family: "Sansita Swashed", system-ui;
     font-weight: 400;
     font-size: 26px;
     color: #FFFFFF;
 }
-
-.button_info2 {
-    background-color: #933C24;
-    color: white;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 10px 5px;
-    width: fit-content;
-    border-radius: 8px;
-    border: 1px solid #000000;
-}
-
 
 .top_produits,
 .nous_decouvrir,
@@ -244,10 +254,10 @@ header {
     line-height: 100%;
     text-align: center;
     color: black;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin: 30px 0;
 }
 
+/* Sélectionne toutes les classes qui commencent par produits */
 [class^="produits"] {
     background-image: url(/IMAGES/Image\ fond\ produits.svg);
     color: #FFFFFF;
@@ -257,15 +267,14 @@ header {
     min-height: 300px;
     max-width: 360px;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 20px 20px;
     box-sizing: border-box;
-    padding-bottom: 20px;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 8px;
     padding-top: 8px;
-
 }
 
-.liste_produits {
+.liste_produits,
+.footer_footer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 17px;
@@ -275,18 +284,10 @@ header {
 }
 
 .footer_footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
     width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-    justify-items: center;
-
+    gap: 20px;
     border-top: 1px solid #E9BD8D33;
 }
-
-
 
 .petit_plaisir,
 .decouvrir {
@@ -303,7 +304,8 @@ header {
     padding-right: 15px;
 }
 
-.texte_produits {
+.texte_produits,
+.bouton_images_produits {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -311,10 +313,7 @@ header {
 }
 
 .bouton_images_produits {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 15px;
 }
 
 .image_produit {
@@ -357,47 +356,6 @@ header {
     margin-top: 21px;
 }
 
-
-
-.a_propos {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    min-height: 379px;
-    background-image: url('/IMAGES/fond_a_propos.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0px;
-    margin-top: 20px;
-    background-size: cover;
-}
-
-.titre_propos {
-    font-family: "Sansita Swashed", system-ui;
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-}
-
-.texte_propos {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #B9B9B9;
-    max-width: 50%;
-    max-width: 250px;
-    text-align: center;
-}
-
-.texte_cafe {
-    color: #E9BD8C;
-    font-size: 14px;
-    font-weight: 600;
-}
-
 [class^="texte_photo_plaisirs"] {
     font-family: Inter;
     font-weight: 600;
@@ -407,9 +365,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 25px;
-
 }
-
 
 .menu_decouvrir {
     display: flex;
@@ -423,7 +379,6 @@ header {
     overflow-x: auto;
 }
 
-
 .menu_decouvrir p {
     font-family: 'Poppins';
     font-size: 16px;
@@ -435,10 +390,7 @@ header {
     display: inline-block;
     white-space: normal;
 }
-
-
-
-
+/* Styles pour le footer au global*/
 footer {
     display: flex;
     background-image: url("/IMAGES/footer_background.svg");
@@ -508,7 +460,6 @@ footer {
     align-self: flex-start;
 }
 
-
 .titre_nouveau_delice,
 .date_nouveau_delice,
 .titre_pain_au_raisin,
@@ -523,6 +474,7 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 0px;
+    margin-top: 25px;
 }
 
 .date_pain_au_raisin,
@@ -546,11 +498,6 @@ footer {
     color: #FFFFFF;
 }
 
-.nouveau_delice,
-.pain_au_raisin {
-    margin-top: 25px;
-}
-
 .actualites {
     align-self: flex-start;
     width: 100%;
@@ -561,8 +508,7 @@ footer {
     font-weight: 600;
     font-size: 16px;
     color: #737373;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     max-width: 200px;
 }
 
@@ -573,45 +519,7 @@ footer {
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    margin-top: 0;
-    margin-left: 0;
-}
-
-.texte_bandeau {
-    display: none;
-}
-
-
-.texte_bandeau.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #FFFFFF;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    gap: 15px;
-}
-
-
-.menu-burger {
-    cursor: pointer;
-    z-index: 1001;
-    margin-right: 30px;
-}
-
-.menu-burger i {
-    font-size: 26px;
-    color: #000000;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.menu-burger i.fa-xmark {
-    transform: rotate(180deg);
-    color: #000000;
+    margin: 0;
 }
 
 .texte_bandeau {
@@ -668,9 +576,8 @@ footer {
     transform: rotate(90deg);
     color: #933C24;
 }
-
+/*Media queries juste pour la tablette */
 @media (min-width: 768px) and (max-width: 1023.98px) {
-
     .liste_produits,
     .petit_plaisir,
     .decouvrir {
@@ -698,7 +605,6 @@ footer {
         gap: 0px;
     }
 
-
     .titre_reduc {
         max-width: 425px;
         font-size: 30px;
@@ -721,10 +627,7 @@ footer {
         font-size: 20px;
     }
 }
-
-
-
-
+/*media queries pour la tablette et le desktop*/
 @media (min-width: 768px) {
     .ligne_footer {
         flex-direction: row;
@@ -776,8 +679,6 @@ footer {
         gap: 40px;
     }
 
-
-
     header {
         background-color: transparent;
         position: absolute;
@@ -785,6 +686,7 @@ footer {
         left: 0;
         width: 100%;
         padding: 0px 40px;
+        justify-content: flex-start;
     }
 
     .menu-burger {
@@ -830,9 +732,14 @@ footer {
 
     .button_info2 {
         margin-left: 15px;
+        margin-top: 40px;
+        font-size: 24px;
+        padding: 24px 38px;
+        width: fit-content;
+        border-radius: 8px;
+        border: 1px solid #000000;
+        margin-left: 50px;
     }
-
-
 
     .contenu_accueil {
         margin-left: 70px;
@@ -851,34 +758,22 @@ footer {
         gap: 0px;
     }
 
-    .button_info2 {
-        margin-top: 40px;
-        font-size: 24px;
-        padding: 24px 38px;
-        width: fit-content;
-        border-radius: 8px;
-        border: 1px solid #000000;
-        margin-left: 50px;
-    }
-
-    [class^="menu_decouvrir"] {
+    [class^="menu_decouvrir"],
+    [class^="texte_photo_plaisirs"] {
         font-size: 24px;
     }
 
     [class^="texte_photo_plaisirs"] {
-        font-size: 32px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-
     }
 
     .petit_plaisir_titre,
     .top_produits,
     .nous_decouvrir {
         font-size: 60px;
-        margin-bottom: 90px;
-        margin-top: 90px;
+        margin: 90px 0;
     }
 
     .petit_plaisir {
@@ -892,14 +787,10 @@ footer {
         width: 360px;
     }
 
-    header {
-        justify-content: flex-start;
-    }
-
     .texte_bandeau {
         margin-left: 10%;
         font-size: 25px;
-        gap: 30px
+        gap: 30px;
     }
 
     .titre_propos {
@@ -909,7 +800,6 @@ footer {
     .texte_propos {
         font-size: 30px;
         max-width: 350px;
-
     }
 
     .button_info {
@@ -963,9 +853,8 @@ footer {
         font-weight: 600;
     }
 }
-
+/*media queries pour le desktop*/
 @media (min-width: 1024px) {
-
     .liste_produits,
     .petit_plaisir,
     .decouvrir {
@@ -1021,26 +910,25 @@ footer {
 .plaisirs_brownies:hover,
 .nouveau_delice:hover,
 .pain_au_raisin:hover {
-    transform: scale(1.03); 
-    z-index: 10; 
+    transform: scale(1.03);
+    z-index: 10;
 }
 
-
 #backToTopButton {
-    display: none; 
+    display: none;
     position: fixed;
-    bottom: 90px; 
-    right: 70px;  
+    bottom: 90px;
+    right: 70px;
     z-index: 999;
     border: none;
     outline: none;
-    background-color: #933C24; 
+    background-color: #933C24;
     color: white;
     cursor: pointer;
-    border-radius: 50%; 
-    font-size: 30px; 
-    width: 60px;  
-    height: 60px; 
+    border-radius: 50%;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -1049,7 +937,7 @@ footer {
 }
 
 #backToTopButton:hover {
-    background-color: #E9BD8C; 
+    background-color: #E9BD8C;
     color: #933C24;
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
