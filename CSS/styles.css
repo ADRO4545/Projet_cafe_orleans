@@ -34,6 +34,7 @@ ol[role='list'] {
 
 /* Set core body defaults */
 body {
+    margin: 0;
     min-height: 100vh;
     line-height: 1.5;
 }
@@ -99,6 +100,7 @@ textarea:not([rows]) {
     top: 5px;
     left: 20px;
     opacity: 1;
+    margin-left: 20px;
 }
 
 .barre_bandeau {
@@ -112,16 +114,21 @@ textarea:not([rows]) {
 .reduction {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
+    margin-top: 15px;
     width: 100%;
-    min-height: 379px;
-    background-image: url('/IMAGES/Bloc\ reduction.svg');
+    background-image: url('/IMAGES/Bloc_reduction.svg');
     background-position: center;
     background-repeat: no-repeat;
     padding: 0px;
+    min-height: 379px;
+    /* <-- Hauteur de "a_propos" */
+    justify-content: space-between;
+    /* <-- Alignement de "a_propos" */
+    background-size: cover;
 }
+
 
 .titre_reduc {
     font-family: "Sansita Swashed", system-ui;
@@ -145,6 +152,11 @@ textarea:not([rows]) {
     font-weight: 600;
 }
 
+.texte_reduc {
+    max-width: 200px;
+    text-align: center;
+}
+
 .button_info {
     background-color: #933C24;
     color: white;
@@ -164,14 +176,14 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative
 }
 
 .accueil {
     display: flex;
     align-items: center;
     width: 100%;
-    height: auto;
-    min-height: 254px;
+    height: 400px;
     background-image: url('/IMAGES/photo accueil.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -182,14 +194,15 @@ header {
 .contenu_accueil {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     margin-left: 21px;
-
+    align-items: flex-start;
 }
 
 .texte_accueil {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .texte_accueil p {
@@ -214,21 +227,20 @@ header {
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 16px;
-    border-radius: 10px;
-    padding: 20px 15px;
+    padding: 10px 5px;
     width: fit-content;
-    /* S'adapte à la largeur du texte */
+    border-radius: 8px;
+    border: 1px solid #000000;
 }
+
 
 .top_produits,
 .nous_decouvrir,
 .petit_plaisir_titre {
     font-family: Sansita Swashed;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 24px;
     line-height: 100%;
-    letter-spacing: 0%;
     text-align: center;
     color: black;
     margin-bottom: 30px;
@@ -240,14 +252,45 @@ header {
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    min-height: 300px;
+    max-width: 360px;
+    align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
     padding-bottom: 20px;
-    margin-bottom: 17px;
     border-radius: 8px 8px 8px 8px;
     padding-top: 8px;
+
+}
+
+.liste_produits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    justify-items: center;
+}
+
+.footer_footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    justify-items: center;
+
+    border-top: 1px solid #E9BD8D33;
+}
+
+
+
+.petit_plaisir,
+.decouvrir {
+    display: grid;
+    justify-items: center;
 }
 
 .info_produit {
@@ -284,6 +327,7 @@ header {
     color: #FFFFFF;
     font-weight: 600;
     font-size: 16px;
+    max-width: 75%;
 }
 
 .nom_bouton {
@@ -322,11 +366,12 @@ header {
     text-align: center;
     width: 100%;
     min-height: 379px;
-    background-image: url('/IMAGES/fond\ à\ propos.svg');
+    background-image: url('/IMAGES/fond_a_propos.svg');
     background-position: center;
     background-repeat: no-repeat;
     padding: 0px;
     margin-top: 20px;
+    background-size: cover;
 }
 
 .titre_propos {
@@ -340,8 +385,10 @@ header {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #5D5D5D;
+    color: #B9B9B9;
     max-width: 50%;
+    max-width: 250px;
+    text-align: center;
 }
 
 .texte_cafe {
@@ -355,7 +402,6 @@ header {
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -363,50 +409,55 @@ header {
 
 }
 
+
 .menu_decouvrir {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    position: relative;
-    border-bottom: 2px solid #D9D9D9;
+    justify-content: flex-start;
+    gap: 15px;
+    border-bottom: 1px solid #D9D9D9;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 95%;
+    scrollbar-width: thin;
+    overflow-x: auto;
 }
 
 
 .menu_decouvrir p {
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #5D5D5D;
+    font-weight: 600;
+    margin-bottom: 5px;
     position: relative;
-    padding-bottom: 10px;
+    cursor: pointer;
+    display: inline-block;
+    white-space: normal;
 }
 
-.menu_decouvrir_gateaux::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background-color: #933C24;
-    border-radius: 20px;
-}
 
-.petit_plaisir,
-.decouvrir,
-.liste_produits {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 footer {
     display: flex;
     background-image: url("/IMAGES/footer_background.svg");
     flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items: center;
 }
 
-.logo_footer {
-    width: 150px;
+.logofooter {
+    width: 115px;
+}
+
+.ligne_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    padding: 20px;
+    gap: 20px;
 }
 
 .texte_suivi {
@@ -420,7 +471,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 2px solid #E9BD8D33;
+    gap: 15px;
 }
 
 .images_suivi {
@@ -432,16 +483,15 @@ footer {
 
 [class^="logo_footer"] {
     width: 42px;
-    max-height: 42px;
-    min-height: 37.28px;
+    height: 42px;
 }
 
 .texte_footer {
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 36px;
     color: #E9BD8C;
-
+    text-align: center;
 }
 
 .info_footer,
@@ -449,28 +499,556 @@ footer {
     display: flex;
     color: white;
     text-align: left;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 24px;
-    align-self: flex-start;
-    margin-left: 42px;
-    gap:0px; 
-
+    gap: 0px;
     flex-direction: column;
+    align-self: flex-start;
+}
+
+
+.titre_nouveau_delice,
+.date_nouveau_delice,
+.titre_pain_au_raisin,
+.date_pain_au_raisin,
+.photos_actualite {
+    margin: 0;
+    padding: 0;
 }
 
 .pain_au_raisin,
 .nouveau_delice {
     display: flex;
     flex-direction: row;
+    gap: 0px;
 }
 
 .date_pain_au_raisin,
-.date_nouveau_delice{
-    color:#E9BD8C;
-    font-family: Poppins;
+.date_nouveau_delice {
+    color: #E9BD8C;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 18px;
-
 }
 
+.texte_nouveau_delice,
+.texte_pain_au_raisin {
+    margin-left: 15px;
+}
+
+.titre_nouveau_delice,
+.titre_pain_au_raisin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.nouveau_delice,
+.pain_au_raisin {
+    margin-top: 25px;
+}
+
+.actualites {
+    align-self: flex-start;
+    width: 100%;
+}
+
+.mentions_legales {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #737373;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 200px;
+}
+
+.a_propos_footer,
+.explorer_footer,
+.actualites_footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.texte_bandeau {
+    display: none;
+}
+
+
+.texte_bandeau.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    gap: 15px;
+}
+
+
+.menu-burger {
+    cursor: pointer;
+    z-index: 1001;
+    margin-right: 30px;
+}
+
+.menu-burger i {
+    font-size: 26px;
+    color: #000000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-burger i.fa-xmark {
+    transform: rotate(180deg);
+    color: #000000;
+}
+
+.texte_bandeau {
+    display: none;
+}
+
+.texte_bandeau.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #933C24;
+    padding: 20px;
+    align-items: center;
+    gap: 15px;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.texte_bandeau.active a {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.texte_bandeau.active a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-burger {
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.menu-burger i {
+    font-size: 26px;
+    color: #000000;
+    transition: transform 0.3s ease;
+}
+
+.menu-burger i.fa-xmark {
+    transform: rotate(90deg);
+    color: #933C24;
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+
+    .liste_produits,
+    .petit_plaisir,
+    .decouvrir {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .petit_plaisir>div:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .footer_footer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: start;
+    }
+
+    .texte_footer {
+        text-align: left;
+    }
+
+    .info_footer,
+    .menu_footer {
+        gap: 0px;
+    }
+
+
+    .titre_reduc {
+        max-width: 425px;
+        font-size: 30px;
+    }
+
+    .texte_reduc {
+        font-size: 19px;
+        max-width: 300px;
+    }
+
+    .accueil {
+        height: 500px;
+    }
+
+    .button_info2 {
+        margin-left: 15px;
+    }
+
+    .menu_decouvrir p {
+        font-size: 20px;
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+    .ligne_footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+
+    .logofooter {
+        width: 150px;
+    }
+
+    .info_footer p,
+    .menu_footer p {
+        line-height: 1;
+    }
+
+    .suivi {
+        flex-direction: row;
+        gap: 25px;
+        margin-right: 70px;
+    }
+
+    .images_suivi {
+        gap: 15px;
+    }
+
+    .texte_suivi {
+        margin: 0;
+    }
+
+    .footer_footer {
+        padding: 0px 40px 30px 40px;
+    }
+
+    .menu_decouvrir {
+        justify-content: center;
+        margin: 0 auto 30px auto;
+        max-width: 800px;
+        width: 95%;
+        gap: 40px;
+    }
+
+    .texte_bandeau.active {
+        display: flex;
+    }
+
+    .a_propos,
+    .reduction {
+        gap: 40px;
+    }
+
+
+
+    header {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0px 40px;
+    }
+
+    .menu-burger {
+        display: none;
+    }
+
+    .texte_bandeau {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .texte_bandeau a {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .texte_bandeau a:hover {
+        color: #E9BD8C;
+    }
+
+    .accueil .contenu_accueil {
+        margin-top: 0px;
+    }
+
+    .logo_bandeau {
+        width: 87px;
+        height: 99px;
+    }
+
+    .accueil {
+        height: 600px;
+    }
+
+    .button_info2 {
+        margin-left: 15px;
+    }
+
+
+
+    .contenu_accueil {
+        margin-left: 70px;
+    }
+
+    .texte_cafe {
+        font-size: 24px;
+    }
+
+    .texte_2cafe {
+        font-size: 74px;
+        line-height: 1.1;
+    }
+
+    .texte_accueil {
+        gap: 0px;
+    }
+
+    .button_info2 {
+        margin-top: 40px;
+        font-size: 24px;
+        padding: 24px 38px;
+        width: fit-content;
+        border-radius: 8px;
+        border: 1px solid #000000;
+        margin-left: 50px;
+    }
+
+    [class^="menu_decouvrir"] {
+        font-size: 24px;
+    }
+
+    [class^="texte_photo_plaisirs"] {
+        font-size: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .petit_plaisir_titre,
+    .top_produits,
+    .nous_decouvrir {
+        font-size: 60px;
+        margin-bottom: 90px;
+        margin-top: 90px;
+    }
+
+    .petit_plaisir {
+        margin-bottom: 70px;
+    }
+
+    .image_pate,
+    .image_donuts,
+    .image_brownies {
+        height: 360px;
+        width: 360px;
+    }
+
+    header {
+        justify-content: flex-start;
+    }
+
+    .texte_bandeau {
+        margin-left: 10%;
+        font-size: 25px;
+        gap: 30px
+    }
+
+    .titre_propos {
+        font-size: 48px;
+    }
+
+    .texte_propos {
+        font-size: 30px;
+        max-width: 350px;
+
+    }
+
+    .button_info {
+        font-size: 24px;
+        margin-bottom: 70px;
+    }
+
+    [class^="photo_"] {
+        height: 350px;
+        width: 360px;
+    }
+
+    [class^="produits"] {
+        height: 411px;
+        width: 360px;
+        background-size: cover;
+        justify-content: space-between;
+    }
+
+    .image_produit {
+        width: 70%;
+        height: auto;
+    }
+
+    .button_info_produits {
+        height: 39px;
+        width: 39px;
+    }
+
+    .prix,
+    .nom_bouton {
+        font-size: 24px;
+    }
+
+    .bouton_produits {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .bouton_images_produits {
+        gap: 40px;
+    }
+
+    .mentions_legales {
+        font-size: 24px;
+        max-width: 100%;
+    }
+
+    .info_footer p,
+    .menu_footer p {
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .liste_produits,
+    .petit_plaisir,
+    .decouvrir {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .footer_footer {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 40px;
+        justify-content: space-between;
+        max-width: 1200px;
+    }
+
+    .texte_footer {
+        text-align: left;
+    }
+
+    .titre_reduc {
+        max-width: 475px;
+        font-size: 36px;
+    }
+
+    .texte_reduc {
+        font-size: 24px;
+        max-width: 350px;
+    }
+
+    .accueil {
+        height: 700px;
+    }
+
+    .menu_decouvrir p {
+        font-size: 24px;
+    }
+}
+
+[class^="produits"],
+[class^="photo"],
+.plaisirs_pate,
+.plaisirs_donuts,
+.plaisirs_brownies,
+.nouveau_delice,
+.pain_au_raisin {
+    transition: transform 0.3s ease-in-out;
+}
+
+[class^="produits"]:hover,
+[class^="photo"]:hover,
+.plaisirs_pate:hover,
+.plaisirs_donuts:hover,
+.plaisirs_brownies:hover,
+.nouveau_delice:hover,
+.pain_au_raisin:hover {
+    transform: scale(1.03); 
+    z-index: 10; 
+}
+
+
+#backToTopButton {
+    display: none; 
+    position: fixed;
+    bottom: 90px; 
+    right: 70px;  
+    z-index: 999;
+    border: none;
+    outline: none;
+    background-color: #933C24; 
+    color: white;
+    cursor: pointer;
+    border-radius: 50%; 
+    font-size: 30px; 
+    width: 60px;  
+    height: 60px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+#backToTopButton:hover {
+    background-color: #E9BD8C; 
+    color: #933C24;
+    transform: scale(1.1); 
+}

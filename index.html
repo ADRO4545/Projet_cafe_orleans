@@ -5,211 +5,298 @@
     <meta charset="UTF-8">
     <title>Projet Café Orléans</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./IMAGES/Modrino_2_preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sansita+Swashed:wght@300..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sansita+Swashed:wght@300..900&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img src="/IMAGES/Modrino 2 preview.png" alt="Logo café" class="logo_bandeau">
-        <img src="/IMAGES/Group 511.png" alt="Barre de sélection" class="barre_bandeau">
+        <img src="/IMAGES/Modrino__2_-removebg-preview_1.svg" alt="Logo café" class="logo_bandeau">
+        <div class="texte_bandeau">
+            <a href="#accueil" class="texte_accueil_bandeau">Accueil</a>
+            <a href="#blog" class="texte_menu_bandeau">Blog</a>
+            <a href="#contact" class="texte_a_propos_bandeau">Contact</a>
+            <a href="#services" class="texte_contact_bandeau">Services</a>
+        </div>
+        <div class="menu-burger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
     </header>
+
+
+    <main>
+        <section class="accueil">
+            <div class="contenu_accueil">
+                <div class="texte_accueil">
+                    <p class="texte_cafe">Café Délicieux</p>
+                    <p class="texte_2cafe">Douceurs & <br> Saveurs</p>
+                </div>
+                <button class="button_info2">Commander</button>
+            </div>
+        </section>
+
+        <p class="top_produits">Nos top produits</p>
+
+        <section class="liste_produits">
+            <div class="produits_pain_complet">
+                <img src="/IMAGES/pain_complet_phooto1.svg" alt="Pain complet" class="image_produit">
+                <div class="info_produit">
+                    <div class="texte_produits">
+                        <p class="prix">40€</p>
+                        <p class="nom_bouton">Pain complet</p>
+                    </div>
+                    <div class="bouton_images_produits">
+                        <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
+                        <button class="bouton_produits">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="produits_patisserie">
+                <img src="/IMAGES/patisserie.svg" alt="Photo patisserie" class="image_produit">
+                <div class="info_produit">
+                    <div class="texte_produits">
+                        <p class="prix">40€</p>
+                        <p class="nom_bouton">Pâtisserie feuilletée</p>
+                    </div>
+                    <div class="bouton_images_produits">
+                        <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
+                        <button class="bouton_produits">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="produits_baguette_campagne">
+                <img src="/IMAGES/baguette_de_campagne.svg" alt="Photo baguette de campagne" class="image_produit">
+                <div class="info_produit">
+                    <div class="texte_produits">
+                        <p class="prix">40€</p>
+                        <p class="nom_bouton">Baguette de campagne</p>
+                    </div>
+                    <div class="bouton_images_produits">
+                        <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
+                        <button class="bouton_produits">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="produits_miche_blanche">
+                <img src="/IMAGES/miche_de_pain_blanc.svg" alt="Photo d'une miche de pain blanc" class="image_produit">
+                <div class="info_produit">
+                    <div class="texte_produits">
+                        <p class="prix">40€</p>
+                        <p class="nom_bouton">Miche de pain blanc</p>
+                    </div>
+                    <div class="bouton_images_produits">
+                        <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
+                        <button class="bouton_produits">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="produits_pate_feuilletee">
+                <img src="/IMAGES/gateau_pate_feuilletee.svg" alt="Photo d'un gateau en pâte feuilletée"
+                    class="image_produit">
+                <div class="info_produit">
+                    <div class="texte_produits">
+                        <p class="prix">40€</p>
+                        <p class="nom_bouton">Gateau pâte feuilletée</p>
+                    </div>
+                    <div class="bouton_images_produits">
+                        <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
+                        <button class="bouton_produits">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="produits_miche_complet">
+                <img src="/IMAGES/miche_de_pain_complet.svg" alt="Photo d'une miche de pain complet"
+                    class="image_produit">
+                <div class="info_produit">
+                    <div class="texte_produits">
+                        <p class="prix">40€</p>
+                        <p class="nom_bouton">Miche de pain blanc</p>
+                    </div>
+                    <div class="bouton_images_produits">
+                        <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
+                        <button class="bouton_produits">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="reduction">
+            <p class="titre_reduc">20% de Réduction sur la première commande </p>
+            <p class="texte_reduc">Profitez de cette offre pour découvrir nos plus beaux délices !</p>
+            <button class="button_info">En savoirs plus</button>
+        </div>
+
+        <p class="nous_decouvrir">Découvrir</p>
+        <div class="menu_decouvrir">
+            <p class="menu_decouvrir_gateaux">Gâteaux</p>
+            <p class="menu_decouvrir_muffins">Muffins</p>
+            <p class="menu_decouvrir_croissant">Croissant</p>
+            <p class="menu_decouvrir_pains">Pains</p>
+            <p class="menu_decouvrir_tarte">Tarte</p>
+        </div>
+
+
+        <section class="decouvrir">
+
+            <img src="/IMAGES/muffin.svg" alt="Image d'un muffin avec des myrtilles autour" class="photo_muffin">
+            <img src="/IMAGES/gateau_fraise.svg" alt="Image d'un gâteau à la fraise" class="photo_gateau_fraise">
+            <img src="/IMAGES/part_gateau.svg" alt="Image d'une part de gâteau" class="photo_part_gateau">
+            <img src="IMAGES/gateau_nature.svg" alt="Image d'un gâteau nature" class="photo_gateau_nature">
+            <img src="IMAGES/part_chocolat__framboise.svg" alt="Image d'une part de gâteau chocolat framboise"
+                class="photo_part_choco_framboise">
+            <img src="IMAGES/muffin_chantilly.svg" alt="Image d'un muffin à la chantilly"
+                class="photo_muffin_chantilly">
+        </section>
+        <div class="a_propos">
+            <p class="titre_propos">A propos </p>
+            <p class="texte_propos">Un café moderne qui respecte les recettes traditionnelles en vous proposant du “fait
+                maison”. </p>
+            <button class="button_info">Lire plus</button>
+        </div>
+
+        <p class="petit_plaisir_titre">Petits plaisir</p>
+        <section class="petit_plaisir">
+            <div class="plaisirs_pate">
+                <img src="/IMAGES/pate_feuilletee.svg" alt="Image d'une pâte feuilletée" class="image_pate">
+                <div class="texte_photo_plaisirs_pate">
+                    <p class="texte_1_pate">Pâte feuilletée</p>
+                    <p class="texte_2_pate">8€</p>
+                </div>
+            </div>
+            <div class="plaisirs_donuts">
+                <img src="/IMAGES/donuts.svg" alt="Image d'un donut" class="image_donuts">
+                <div class="texte_photo_plaisirs_donuts">
+                    <p class="texte_1_donuts">Donuts</p>
+                    <p class="texte_2_donuts">8€</p>
+                </div>
+            </div>
+            <div class="plaisirs_brownies">
+                <img src="/IMAGES/brownies.svg" alt="Image de brownies" class="image_brownies">
+                <div class="texte_photo_plaisirs_brownies">
+                    <p class="texte_1_brownies">Brownies</p>
+                    <p class="texte_2_brownies">8€</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="ligne_footer">
+            <img src="/IMAGES/Modrino__2_-removebg-preview_1.svg" alt="Logo café orléans" class="logofooter">
+            <div class="suivi">
+                <p class="texte_suivi">Suivez-nous</p>
+                <div class="images_suivi">
+                    <img src="/IMAGES/facebook_footer.svg" alt="Logo facebook" class="logo_footer_facebook">
+                    <img src="/IMAGES/pinterest_footer.svg" alt="Logo instagram" class="logo_footer_pinterest">
+                    <img src="/IMAGES/whats_app_footer.svg" alt="Logo whatsapp" class="logo_footer_whatsapp">
+                    <img src="/IMAGES/instagram_footer.svg" alt="Logo instagram" class="logo_footer_instagram">
+                </div>
+            </div>
+        </div>
+        <div class="footer_footer">
+            <div class="a_propos_footer">
+                <p class="texte_footer">A propos</p>
+                <div class="info_footer">
+                    <p>02 38 00 00 00</p>
+                    <p>bakery@coda.school</p>
+                    <p>24 rue Jeanne d'Arc</p>
+                    <p>45000 Orléans</p>
+                </div>
+            </div>
+            <div class="explorer_footer">
+                <p class="texte_footer">Explorer</p>
+                <div class="menu_footer">
+                    <p>Accueil</p>
+                    <p>Blog</p>
+                    <p>Contact</p>
+                    <p>Services</p>
+                </div>
+            </div>
+            <div class="actualites_footer">
+                <p class="texte_footer">Actualité</p>
+                <div class="actualites">
+                    <div class="nouveau_delice">
+                        <img src="/IMAGES/photo_acutalité_délice.png" alt="Photo d'un nouveau gateau"
+                            class="photos_actualite">
+                        <div class="texte_nouveau_delice">
+                            <p class="date_nouveau_delice">14 juin 2024</p>
+                            <p class="titre_nouveau_delice">Nouveau délice</p>
+                        </div>
+                    </div>
+                    <div class="pain_au_raisin">
+                        <img src="/IMAGES/photo_pain_raisin_acutalites.png" alt="photo d'un pain au raisin"
+                            class="photos_actualite">
+                        <div class="texte_pain_au_raisin">
+                            <p class="date_pain_au_raisin">10 juin 2024</p>
+                            <p class="titre_pain_au_raisin">Pain au raisin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mentions_legales">
+            <p>© 2025 Coda Bakery.
+                Tous droits réservés</p>
+        </div>
+    </footer>
+    <a href="#top" id="backToTopButton" title="Retour en haut">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+            const burger = document.querySelector('.menu-burger i');
+            const texte_bandeau = document.querySelector('.texte_bandeau');
+            let isOpen = false;
+
+            function toggleMenu() {
+                isOpen = !isOpen;
+                texte_bandeau.classList.toggle('active', isOpen);
+                if (isOpen) {
+                    burger.classList.remove('fa-bars');
+                    burger.classList.add('fa-xmark');
+                } else {
+                    burger.classList.remove('fa-xmark');
+                    burger.classList.add('fa-bars');
+                }
+            }
+    
+            if (burger) {
+                document.querySelector('.menu-burger').addEventListener('click', toggleMenu);
+            }
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    if (texte_bandeau) texte_bandeau.classList.remove('active');
+                    if (burger) {
+                        burger.classList.remove('fa-xmark');
+                        burger.classList.add('fa-bars');
+                    }
+                    isOpen = false;
+                }
+            });
+            const backToTopBtn = document.getElementById('backToTopButton');
+
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTopBtn.style.display = 'flex'; 
+                    } else {
+                        backToTopBtn.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
-<main>
-    <section class="accueil">
-        <div class="contenu_accueil">
-            <div class="texte_accueil">
-                <p class="texte_cafe">Café Délicieux</p>
-                <p class="texte_2cafe">Douceurs & </br> Saveurs</p>
-            </div>
-            <button class="button_info2">Commander</button>
-        </div>
-    </section>
-
-    <p class="top_produits">Nos top produits</p>
-
-    <section class="liste_produits">
-        <div class="produits_pain_complet">
-            <img src="/IMAGES/pain_complet_phooto1.svg" alt="Pain complet" class="image_produit">
-            <div class="info_produit">
-                <div class="texte_produits">
-                    <p class="prix">40€</p>
-                    <p class="nom_bouton">Pain complet</p>
-                </div>
-                <div class="bouton_images_produits">
-                    <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
-                    <button class="bouton_produits">Ajouter</button>
-                </div>
-            </div>
-        </div>
-        <div class="produits_patisserie">
-            <img src="/IMAGES/patisserie.svg" alt="Photo patisserie" class="image_produit">
-            <div class="info_produit">
-                <div class="texte_produits">
-                    <p class="prix">40€</p>
-                    <p class="nom_bouton">Pâtisserie feuilletée</p>
-                </div>
-                <div class="bouton_images_produits">
-                    <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
-                    <button class="bouton_produits">Ajouter</button>
-                </div>
-            </div>
-        </div>
-        <div class="produits_baguette_campagne">
-            <img src="/IMAGES/baguette de campagne.svg" alt="Photo baguette de campagne" class="image_produit">
-            <div class="info_produit">
-                <div class="texte_produits">
-                    <p class="prix">40€</p>
-                    <p class="nom_bouton">Baguette de campagne</p>
-                </div>
-                <div class="bouton_images_produits">
-                    <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
-                    <button class="bouton_produits">Ajouter</button>
-                </div>
-            </div>
-        </div>
-        <div class="produits_miche_blanche">
-            <img src="/IMAGES/miche de pain blanc.svg" alt="Photo d'une miche de pain blanc" class="image_produit">
-            <div class="info_produit">
-                <div class="texte_produits">
-                    <p class="prix">40€</p>
-                    <p class="nom_bouton">Miche de pain blanc</p>
-                </div>
-                <div class="bouton_images_produits">
-                    <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
-                    <button class="bouton_produits">Ajouter</button>
-                </div>
-            </div>
-        </div>
-        <div class="produits_miche_blanche">
-            <img src="/IMAGES/gateau_pate_feuilletee.svg" alt="Photo d'un gateau en pâte feuilletée"
-                class="image_produit">
-            <div class="info_produit">
-                <div class="texte_produits">
-                    <p class="prix">40€</p>
-                    <p class="nom_bouton">Gateau pâte feuilletée</p>
-                </div>
-                <div class="bouton_images_produits">
-                    <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
-                    <button class="bouton_produits">Ajouter</button>
-                </div>
-            </div>
-        </div>
-        <div class="produits_miche_complet">
-            <img src="/IMAGES/miche de pain complet.svg" alt="Photo d'une miche de pain complet" class="image_produit">
-            <div class="info_produit">
-                <div class="texte_produits">
-                    <p class="prix">40€</p>
-                    <p class="nom_bouton">Miche de pain blanc</p>
-                </div>
-                <div class="bouton_images_produits">
-                    <img src="/IMAGES/info.png" alt="Info" class="button_info_produits">
-                    <button class="bouton_produits">Ajouter</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="reduction">
-        <p class="titre_reduc">20% de Réduction sur la première commande </p>
-        <p class="texte_reduc">Profitez de cette offre pour découvrir nos plus beaux délices !</p>
-        <button class="button_info">En savoirs plus</button>
-    </div>
-
-    <p class="nous_decouvrir">Découvrir</p>
-    <div class="menu_decouvrir">
-        <p class="menu_decouvrir_gateaux">Gâteaux</p>
-        <p class="menu_decouvrir_muffins">Muffins</p>
-        <p class="menu_decouvrir_croissant">Croissant</p>
-        <p class="menu_decouvrir_pains">Pains</p>
-    </div>
-
-
-    <section class="decouvrir">
-
-        <img src="/IMAGES/muffin.svg" alt="Image d'un muffin avec des myrtilles autour" class="photo_muffin">
-        <img src="/IMAGES/gateau fraise.svg" alt="Image d'un gâteau à la fraise" class="photo_gateau_fraise">
-        <img src="/IMAGES/part gateau.svg" alt="Image d'une part de gâteau" class="photo_part_gateau">
-        <img src="IMAGES/gateau nature.svg" alt="Image d'un gâteau nature" class="photo_gateau_nature">
-        <img src="IMAGES/part chocolat__framboise.svg" alt="Image d'une part de gâteau chocolat framboise"
-            class="photo_part_choco_framboise">
-        <img src="IMAGES/muffin_chantilly.svg" alt="Image d'un muffin à la chantilly" class="photo_muffin_chantilly">
-    </section>
-    <div class="a_propos">
-        <p class="titre_propos">A propos </p>
-        <p class="texte_propos">Un café moderne qui respecte les recettes traditionnelles en vous proposant du “fait
-            maison”. </p>
-        <button class="button_info">Lire plus</button>
-    </div>
-
-    <p class="petit_plaisir_titre">Petits plaisir</p>
-    <section class="petit_plaisir">
-        <div class="plaisirs_pate">
-            <img src="/IMAGES/pate_feuilletee.svg" alt="Image d'une pâte feuilletée" class="image_pate">
-            <div class="texte_photo_plaisirs_pate">
-                <p class="texte_1_pate">Pâte feuilletée</p>
-                <p class="texte_2_pate">8€</p>
-            </div>
-        </div>
-        <div class="plaisirs_donuts">
-            <img src="/IMAGES/donuts.svg" alt="Image d'un donut" class="image_donuts">
-            <div class="texte_photo_plaisirs_donuts">
-                <p class="texte_1_donuts">Donuts</p>
-                <p class="texte_2_donuts">8€</p>
-            </div>
-        </div>
-        <div class="plaisirs_brownies">
-            <img src="/IMAGES/brownies.svg" alt="Image de brownies" class="image_brownies">
-            <div class="texte_photo_plaisirs_brownies">
-                <p class="texte_1_brownies">Brownies</p>
-                <p class="texte_2_brownies">8€</p>
-            </div>
-        </div>
-
-    </section>
-</main>
-
-<footer>
-    <img src="/IMAGES/logo footer.svg" alt="Logo café orléans" class="logo_footer">
-    <div class="suivi">
-        <p class="texte_suivi">Suivez-nous</p>
-        <div class="images_suivi">
-            <img src="/IMAGES/facebook footer.svg" alt="Logo facebook" class="logo_footer_facebook">
-            <img src="/IMAGES/pinterest_footer.svg" alt="Logo instagram" class="logo_footer_pinterest">
-            <img src="/IMAGES/whats_app footer.svg" alt="Logo whatsapp" class="logo_footer_whatsapp">
-            <img src="/IMAGES/instagram footer.svg" alt="Logo instagram" class="logo_footer_instagram">
-        </div>
-    </div>
-    <p class="texte_footer">A propos</p>
-    <div class="info_footer">
-        <p>02 38 00 00 00</p>
-        <p>bakery@coda.school</p>
-        <p>24 rue Jeanne d'Arc</p>
-        <p>45000 Orléans</p>
-    </div>
-    <p class="texte_footer">Explorer</p>
-    <div class="menu_footer">
-        <p>Accueil</p>
-        <p>Blog</p>
-        <p>Contact</p>
-        <p>Services</p>
-    </div>
-    <p class="texte_footer">Actualité</p>
-    <div class="nouveau_delice">
-        <img src="/IMAGES/photo_acutalité délice.png" alt="Photo d'un nouveau gateau" class="photo_actualite">
-        <div class="texte_nouveau_delice">
-            <p class="date_nouveau_delice">14 juin 2024</p>
-            <p class="titre_nouveau_delice">Nouveau délice</p>
-        </div>    
-    </div>
-    <div class="pain_au_raisin">
-        <img src="/IMAGES/photo pain au raisin acutalité.png" alt="photo d'un pain au raisin" class="photo_actualite">
-        <div class="texte_pain_au_raisin">
-            <p class="date_pain_au_raisin">10 juin 2024</p>
-            <p class="titre_pain_au_raisin">Pain au raisin</p>
-    </div>
-</footer>
 </html>
