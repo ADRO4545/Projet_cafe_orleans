@@ -127,13 +127,13 @@ textarea:not([rows]) {
 
 .reduction {
     margin-top: 15px;
-    background-image: url('/IMAGES/Bloc_reduction.svg');
+    background-image: url('IMAGES/Bloc_reduction.svg');
     justify-content: space-between;
 }
 
 .a_propos {
     margin-top: 20px;
-    background-image: url('/IMAGES/fond_a_propos.svg');
+    background-image: url('IMAGES/fond_a_propos.svg');
     justify-content: space-between;
 }
 
@@ -213,7 +213,7 @@ header {
     align-items: center;
     width: 100%;
     height: 400px;
-    background-image: url('/IMAGES/photo accueil.png');
+    background-image: url('IMAGES/photo accueil.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
